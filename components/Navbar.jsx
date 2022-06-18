@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "../public/assets/logo.png";
 import Image from "next/image";
 import { BsThreeDotsVertical, BsSearch, BsPerson } from "react-icons/bs";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -101,7 +102,8 @@ const Navbar = () => {
 			{/* Middle */}
 			{/* Note: at mobile length hide search */}
 			<div className="hidden md:flex grow-[2] items-center justify-center">
-				<div className="bg-gray-900 text-white flex justify-center items-center max-w-[400] m-auto p-2 rounded-2xl">
+				{/* Justify the search bar to fit max width */}
+				<div className="bg-gray-900 text-white flex justify-between items-center max-w-[400] w-full m-auto p-2 rounded-2xl">
 					<div>
 						<input
 							type="text"
@@ -119,10 +121,35 @@ const Navbar = () => {
 			<div className="hidden md:flex grow items-center justify-end">
 				<div className="flex items-center">
 					<Link href="/">
-						<button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff]">Account</button>
+						<button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff]">
+							Account
+						</button>
 					</Link>
 					<BsPerson size={30} />
 				</div>
+			</div>
+
+			{/* Hamburger Menu */}
+			<div className="block md:hidden z-10 cursor-pointer">
+				<AiOutlineMenu size={25} />
+			</div>
+
+			{/* Mobile Menu */}
+			<div className="fixed top-0 left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center ease-in duration-300">
+				<ul className="text-center">
+					<li className="p-4 text-3xl font-bold">
+						<Link href="/">Home</Link>
+					</li>
+					<li className="p-4 text-3xl font-bold">
+						<Link href="/">Live Channels</Link>
+					</li>
+					<li className="p-4 text-3xl font-bold">
+						<Link href="/">Top Categories</Link>
+					</li>
+					<li className="p-4 text-3xl font-bold">
+						<Link href="/">Account</Link>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
