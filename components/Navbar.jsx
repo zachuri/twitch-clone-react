@@ -126,7 +126,7 @@ const Navbar = () => {
 			{/* Right Side */}
 			<div className="hidden md:flex grow items-center justify-end">
 				<div className="flex items-center">
-					<Link href="/">
+					<Link href="/account">
 						<button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff]">
 							Account
 						</button>
@@ -145,7 +145,7 @@ const Navbar = () => {
 
 			{/* Mobile Menu */}
 			<div
-        // md:hidden -> anything above medium make hidden
+				// md:hidden -> anything above medium make hidden
 				className={
 					nav
 						? "md:hidden fixed top-0 left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center ease-in duration-300"
@@ -163,7 +163,7 @@ const Navbar = () => {
 						<Link href="/">Top Categories</Link>
 					</li>
 					<li className="p-4 text-3xl font-bold">
-						<Link href="/">Account</Link>
+						<Link href="/account">Account</Link>
 					</li>
 				</ul>
 			</div>
