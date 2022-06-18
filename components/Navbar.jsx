@@ -3,7 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Logo from "../public/assets/logo.png";
 import Image from "next/image";
-import { BsThreeDotsVertical, BsSearch } from "react-icons/bs";
+import { BsThreeDotsVertical, BsSearch, BsPerson } from "react-icons/bs";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -116,6 +116,14 @@ const Navbar = () => {
 			</div>
 
 			{/* Right Side */}
+			<div className="hidden md:flex grow items-center justify-end">
+				<div className="flex items-center">
+					<Link href="/">
+						<button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff]">Account</button>
+					</Link>
+					<BsPerson size={30} />
+				</div>
+			</div>
 		</div>
 	);
 };
