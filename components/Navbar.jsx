@@ -3,7 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Logo from "../public/assets/logo.png";
 import Image from "next/image";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical, BsSearch } from "react-icons/bs";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -97,7 +97,23 @@ const Navbar = () => {
 					</Menu>
 				</div>
 			</div>
+
 			{/* Middle */}
+			{/* Note: at mobile length hide search */}
+			<div className="hidden md:flex grow-[2] items-center justify-center">
+				<div className="bg-gray-900 text-white flex justify-center items-center max-w-[400] m-auto p-2 rounded-2xl">
+					<div>
+						<input
+							type="text"
+							className="bg-transparent border-none text-white focus:outline-none"
+						/>
+					</div>
+					<div>
+						<BsSearch />
+					</div>
+				</div>
+			</div>
+
 			{/* Right Side */}
 		</div>
 	);
