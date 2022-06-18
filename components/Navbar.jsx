@@ -106,6 +106,7 @@ const Navbar = () => {
 						<input
 							type="text"
 							className="bg-transparent border-none text-white focus:outline-none"
+							placeholder="Search"
 						/>
 					</div>
 					<div>
