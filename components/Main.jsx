@@ -2,6 +2,7 @@ import React from "react";
 import LiveChannels from "../components/LiveChannels";
 import Hero from "../components/Hero";
 import IconBar from "../components/IconBar";
+import Categories from "../components/Categories";
 
 const Main = () => {
 	return (
@@ -9,6 +10,7 @@ const Main = () => {
 			<Hero />
 			<LiveChannels />
 			<IconBar />
+			<Categories />
 		</div>
 	);
 };
