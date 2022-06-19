@@ -20,7 +20,7 @@ const Navbar = () => {
 
 	const { data: session } = useSession();
 
-	console.log(session);
+	// console.log(session);
 
 	return (
 		<div className="fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#0e0e10] mb-[2px] z-10">
@@ -230,16 +230,28 @@ const Navbar = () => {
 				}
 			>
 				<ul className="text-center">
-					<li className="p-4 text-3xl font-bold">
+					<li
+						onClick={() => setNav(false)}
+						className="p-4 text-3xl font-bold"
+					>
 						<Link href="/">Home</Link>
 					</li>
-					<li className="p-4 text-3xl font-bold">
+					<li
+						onClick={() => setNav(false)}
+						className="p-4 text-3xl font-bold"
+					>
 						<Link href="/">Live Channels</Link>
 					</li>
-					<li className="p-4 text-3xl font-bold">
+					<li
+						onClick={() => setNav(false)}
+						className="p-4 text-3xl font-bold"
+					>
 						<Link href="/">Top Categories</Link>
 					</li>
-					<li className="p-4 text-3xl font-bold">
+					<li
+						onClick={() => setNav(false)}
+						className="p-4 text-3xl font-bold"
+					>
 						<Link href="/account">Account</Link>
 					</li>
 				</ul>
